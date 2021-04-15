@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Tamira and Nono's wedding</title>
+        <link href="scss/styling.css" rel="stylesheet" type="text/css">
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    </head>
+
+    <header style="text-align: center;">                                    <!--had to use in-line styling cause my .center function wasn't working-->
+        <h1 id="page-top">Tamira and Letlhogonono</h1>       
+        <nav>
+            <div id="menu"> 
+                <ul> 
+                    <li><a href="index.html" class="nav-links">Home</a></li>
+                    <li><a href="rsvp.html" class="nav-links">RSVP</a></li> 
+                    <li><a href="venue.html" class="nav-links">The venue</a></li>  
+                    <li><a href="save-for-later.html" class="nav-links">Registry</a> 
+                        <ul class="dropdown-menu"> 
+                            <li><a href="saved-for-later.html" class="nav-links">Saved items</a></li> 
+                        </ul> 
+                    </li> 
+                </ul> 
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <img class="center-image" src="images/balcony.jpg" alt="photo with Table Mountain"> <!--Giving it a separate class so that I can center it without centering all photos-->
+        <section class="information-block">                                 <!--Giving this section a class instead of IDs, because I apply the same properties across all sections-->
+            <h2>Our story</h2>
+            <p> 
+                It all started with a swipe... back in 2018 we both signed up for a dating app called Bumble, looking for love. 
+                For Nono, it was Tamira's bucketlist (a few items like seeing the Northern lights are still on there!) that peaked his interest.
+            </p>
+            <figure class="quote-block">                                    <!--Combining the required quote and required block in one go-->
+                <blockquote>
+                    "To this day, Tamira's sense of adventure means there's never a dull moment between us"
+                </blockquote>
+                <figcaption class=quote-block-caption>                      <!--wrapped the quote in a figure so I could use the "source" as a caption, got this idea from Bootstrap-->
+                    -   Nono
+                </figcaption>
+            </figure>
+            <p> 
+                For Tamira, it was a photo of Nono laughing so hard his body and head were tilted backwards. Within a couple of weeks, we had arranged a first date at the theatre.
+                In hindsight, this wasn't an ideal first meetup, because we couldn't chat much and kept stealing sideways glances at each other.
+                We quickly arranged a second date, where we really hit it off. Soon we were off the app and in each others' spell.
+                At the end of 2019 we moved in together, and after just a few months Covid-19 meant we were spending a lot more time together than we ever planned!
+            </p>
+            <figure class="quote-block">
+                <blockquote>
+                    "Nono has me in stitches or giggles several times a day; he makes adulting together a blast"
+                </blockquote>
+                <figcaption class=quote-block-caption>
+                    -   Tamira
+                </figcaption>
+            </figure>
+            <p>
+                Luckily, we got on like two peas in a pod and it wasn't long before we started dreaming of building a future together.
+                Fast forward to today, and we are overjoyed to be celebrating our special day with you. 
+            </p>
+        </section>
+        <section class="information-block">
+            <h2>Add your thoughts!</h2>
+            <form id="comment-form">
+                <input type="textarea" name="comment" id="comment-text" rows="4" cols="50">
+                <input type="submit" id="commentSubmit">
+            </form>
+            <div id="comments-area">
+
+            </div>
+        </section>
+    <script src="js/wedding.js"></script>  
+    <script src="js/index.js"></script>  
+    </body>
+
+    <footer class="main-page-footer">
+        <a href="#page-top">Return to the top</a>                   <!--Added this for ease of navigation-->
+    </footer>
+
+</html>

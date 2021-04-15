@@ -1,0 +1,192 @@
+/* SETTING SOME FUNCTIONS/MIXINS */
+/* SETTING SOME FUNCTIONS */
+.center, header {
+  /*To center things */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SETTING SOME VARIABLES*/
+/* SETTING SOME GLOBAL STYLING */
+* {
+  font-family: Garamond,Baskerville,"Baskerville Old Face","Hoefler Text","Times New Roman",serif;
+}
+
+/* STYLING THE GENEREAL PROPERTIES */
+header {
+  /*This is not working, so I had to forcce it in the HTML. Why?*/
+}
+
+body {
+  margin-left: 70px;
+  margin-right: 70px;
+  /*Applying the margins to all main content*/
+}
+
+h1 {
+  font-size: 50pt;
+  /* Centering this did not work until I centered the whole heading with inline styling... why?*/
+}
+
+ul {
+  list-style: circle;
+}
+
+footer {
+  margin: 60px auto;
+  text-align: center;
+}
+
+/* EXPERIMENTING WITH NESTED STYLING */
+nav {
+  font-size: x-large;
+  margin-bottom: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  /* to remove the underline of standard anchors: https://stackoverflow.com/a/6868051/12786165*/
+  color: #696969;
+  /* to remove the bright blue of standard anchors*/
+}
+
+nav a:visited {
+  text-decoration: none;
+  /* to remove the purple of standard anchors*/
+}
+
+nav a:hover {
+  color: #A9A9A9;
+  /* for some animation */
+}
+
+table.menu-table tr td:first-child {
+  /*Got this from: https://stackoverflow.com/a/27788141/12786165 */
+  width: 150px;
+}
+
+table.menu-table tr td:nth-child(2) {
+  max-width: 600px;
+}
+
+/* EXPERIMENTING WITH COMBINING SELECTORS */
+h2, p, table, ul {
+  color: #696969;
+  /* Using variables to reduce repetition */
+}
+
+/* EXPERIMENTING WITH OPERATORS */
+#nooitgedacht-text {
+  max-width: 1130px;
+  /* Just to align nicely with the 3 images in desktop mode */
+}
+
+/* DEFINING SOME CUSTOM CLASSES */
+.nav-links {
+  padding-left: 40px;
+  padding-right: 40px;
+  /* To space out the menu items a bit */
+}
+
+.center-image {
+  /* Got this from: https://stackoverflow.com/a/35345577/12786165 */
+  padding: 0;
+  display: block;
+  margin: 20px auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.quote-block {
+  /* The required block */
+  color: #696969;
+  font-size: 15px;
+  max-width: 700px;
+  background-color: #f2f2f2;
+  padding: 5px;
+}
+
+.quote-block-caption {
+  color: #A9A9A9;
+  padding-left: 45px;
+  padding-bottom: 10px;
+}
+
+.submit-button {
+  text-align: center;
+  /* Got this from: https://stackoverflow.com/questions/9971740/aligning-a-button-to-the-center */
+}
+
+.information-block {
+  margin-top: 30px;
+  max-width: 1280px;
+  /* so it doesn't take up the whole screen in desktop mode */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.venue-photos {
+  /* to space out the photos a bit */
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.registry-item {
+  margin: 10px;
+}
+
+/*https://www.tutorialspoint.com/How-to-place-two-divs-next-to-each-other-in-HTML*/
+.registry-button {
+  margin: 20px;
+  text-align: center;
+}
+
+.registry-image {
+  padding: 20px;
+}
+
+/* STYLING SOME UNIQUE IDs */
+#form-block {
+  /*to create a border */
+  border-style: dotted;
+  border-width: 1px;
+  border-color: #A9A9A9;
+  padding: 20px;
+  max-width: 250px;
+  color: #696969;
+}
+
+#directions-image, #directions-text {
+  /*Got this from: https://stackoverflow.com/a/37377793/12786165 */
+  max-width: 100%;
+  vertical-align: top;
+  display: inline-block;
+  padding-right: 50px;
+  color: #696969;
+}
+
+#slide-button {
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+
+/* Creating a drop-down menu accordeon style
+
+https://www.learningjquery.com/2015/10/using-jquery-to-create-a-drop-down-menu */
+#menu a {
+  text-decoration: none;
+  color: #333;
+  padding-right: 5px;
+}
+
+/* Making the lis items appear next to each other instead of underneath each other*/
+#menu ul li {
+  display: inline;
+}
+
+/* this is not visible for now, but when the item slides down with jQuery, it will be*/
+.dropdown-menu {
+  display: none;
+}
+/*# sourceMappingURL=styling.css.map */

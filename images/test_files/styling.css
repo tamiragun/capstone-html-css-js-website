@@ -1,0 +1,63 @@
+/*SETTING SOME FUNCTIONS/MIXINS */
+/*SETTING SOME VARIABLES*/
+* {
+  font-family: Garamond,Baskerville,"Baskerville Old Face","Hoefler Text","Times New Roman",serif;
+}
+
+header {
+  /*This is not working. why?? */
+}
+
+h1 {
+  font-size: 50pt;
+  color: #696969;
+  /*This is not working, so I had to forcce it in the HTML. Why??*/
+}
+
+nav {
+  /*This is not working, so I had to forcce it in the HTML. Why??*/
+  font-size: x-large;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.nav-links {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  color: #696969;
+}
+
+p {
+  color: #696969;
+}
+
+figure {
+  color: #696969;
+}
+
+figcaption {
+  color: #A9A9A9;
+}
+
+ul {
+  color: #696969;
+  list-style: circle;
+}
+
+body {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* SETTING SOME FUNCTIONS */
+.center, header, h1, nav {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*# sourceMappingURL=styling.css.map */

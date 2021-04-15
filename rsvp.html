@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Tamira and Nono's wedding</title>
+        <link href="scss/styling.css" rel="stylesheet" type="text/css">
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    </head>
+
+    <header style="text-align: center;">
+        <h1 id="page-top">Tamira and Letlhogonono</h1>
+        <nav>
+            <div id="menu"> 
+                <ul> 
+                    <li><a href="index.html" class="nav-links">Home</a></li>
+                    <li><a href="rsvp.html" class="nav-links">RSVP</a></li> 
+                    <li><a href="venue.html" class="nav-links">The venue</a></li>  
+                    <li><a href="save-for-later.html" class="nav-links">Registry</a> 
+                        <ul class="dropdown-menu"> 
+                            <li><a href="saved-for-later.html" class="nav-links">Saved items</a></li> 
+                        </ul> 
+                    </li> 
+                </ul> 
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <section class="information-block">
+            <h2>The wedding</h2>
+            <ul>                                                        <!--The required list-->
+                <li><strong>Date:</strong> Saturday, 5 March 2022</li>
+                <li><strong>Time:</strong> 3pm for 4pm sharp start</li>
+                <li><strong>Venue:</strong> <a href="venue.html">Nooitgedacht Estate</a>, Stellenbosch, South Africa</li>
+                <li><strong>Dress code:</strong> Dress to kill.</li>
+            </ul>
+            <p>Please let us know at your earliest convenience if you will be able to make it or not. You can RSVP by filling out the form <a href="rsvp.html">here</a>.</p>
+            <p>For those of you traveling from outside South Africa, don't hesitate to browse this website for tips on accommodadtion near the venue, and even must-sees in the surrounding area.</p>
+            <p>What about Covid-19, you say? We're hoping for the best, but will keep you posted if there are any material changes to our wedding plans.</p>
+        </section>
+        
+        <section class="information-block">
+            <h2>The menu</h2>
+            <p>If you have any dietary restrictions outside of what is presented here, please get in touch latest 2 weeks before the event.</p>
+            <table class="menu-table">                                              <!--Adding a class so I can style this table without styling all tables-->
+                <tr>                                                                <!--Not making headings, don't think it is necessary in this table-->
+                    <td>Option 1: lamb</td>
+                    <td>Lamb rump accompanied by buttery crushed baby potatoes, honey & thyme carrots, a side of green vegetables and a red wine and rosemary jus</td>
+                </tr>
+                <tr>
+                    <td>Option 2: beef</td>
+                    <td>Marinated beef fillet served on reasted garlic puree, dauphinoise potatoes and a side of seasonal vegetables finished with edamame beans & shimmegi mushrooms</td>
+                </tr>
+                <tr>
+                    <td>Option 3: vegetarian</td>
+                    <td>Homemade spinach and ricotta ravioli servced in a creamy blue cheese sauce</td>
+                </tr>
+            </table>
+        </section>
+        <section class="information-block">
+            <h2 id="rsvp-form-title">RSVP form</h2>
+            <div id="form-block">                                                   <!--Adding a class and id here so I can style it with a custom border-->
+                <form action="mailto:t.gunzburg@gmail.com" method="POST" enctype="multipart/form-data" name="EmailForm"> <!--https://blog.hubspot.com/marketing/html-form-email-->
+                    <label>Name:</label>
+                    <input type="text">
+                    <br>
+                    <p>Will you attend our wedding?</p>
+                    <input type="radio" id="attend" name="attendance" value="attend">               <!--The required radio, got this from Codecademy-->
+                    <label for="attend">Yes</label>
+                    <input type="radio" id="not-attend" name="attendance" value="not-attend">
+                    <label for="not-attend">No</label>
+                    <br>
+                    <p>Will you bring a +1?</p>
+                    <input type="radio" id="couple" name="number-guests" value="2">
+                    <label for="couple">Yes</label>
+                    <input type="radio" id="single" name="number-guests" value="1">
+                    <label for="single">No</label>
+                    <br>
+                    <br>
+                    <label for="menu-option-1">Which dish would you like?</label>
+                    <br>
+                    <br>
+                    <select id="menu-option-1" name="menu-option-1">
+                        <option value="lamb">Lamb</option>
+                        <option value="beef">Beef</option>
+                        <option value="veg">Ravioli</option>
+                    </select>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="submit-button">                                <!--Making this a div so I can center it https://stackoverflow.com/questions/9971740/aligning-a-button-to-the-center-->
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    <script src="js/wedding.js"></script>     
+    </body>
+
+    <footer>
+        <a href="#page-top">Return to the top</a>
+    </footer>
+
+</html>

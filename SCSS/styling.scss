@@ -1,0 +1,203 @@
+/* SETTING SOME FUNCTIONS/MIXINS */
+
+@mixin side-margin($pixel) {                    
+    margin-left: $pixel;
+    margin-right: $pixel;
+}
+
+@mixin side-padding($pixel) {
+    padding-left: $pixel;
+    padding-right: $pixel;
+}
+
+/* SETTING SOME FUNCTIONS */
+
+.center {                                           /*To center things */
+    display: block;
+    @include side-margin(auto);
+}
+
+/* SETTING SOME VARIABLES*/
+
+$main-colour: #696969;
+$secondary-colour: #A9A9A9;
+$main-image-width: 1280px;
+
+
+/* SETTING SOME GLOBAL STYLING */
+
+*{
+    font-family: Garamond,Baskerville,"Baskerville Old Face","Hoefler Text","Times New Roman",serif; 
+}
+
+/* STYLING THE GENEREAL PROPERTIES */
+
+header {
+    @extend .center;                /*This is not working, so I had to forcce it in the HTML. Why?*/
+}
+
+body {
+    @include side-margin (70px);    /*Applying the margins to all main content*/
+}
+
+h1 {
+    font-size: 50pt;                /* Centering this did not work until I centered the whole heading with inline styling... why?*/
+}
+
+ul {
+    list-style: circle;
+}
+
+footer {
+    margin: 60px auto;
+    text-align: center;
+}
+
+/* EXPERIMENTING WITH NESTED STYLING */
+
+nav {        
+    font-size: x-large;
+    margin-bottom: 40px;
+    a {
+        text-decoration: none;      /* to remove the underline of standard anchors: https://stackoverflow.com/a/6868051/12786165*/
+        color: $main-colour;        /* to remove the bright blue of standard anchors*/              
+    }
+    a:visited {     
+        text-decoration: none;      /* to remove the purple of standard anchors*/          
+    }
+    a:hover {
+        color:$secondary-colour;    /* for some animation */        
+    }
+}
+
+table.menu-table {
+    tr td:first-child {             /*Got this from: https://stackoverflow.com/a/27788141/12786165 */
+        width: 150px;
+    }
+    tr td:nth-child(2) {
+        max-width: 600px;
+    }
+}
+
+/* EXPERIMENTING WITH COMBINING SELECTORS */
+
+h2, p, table, ul {
+    color: $main-colour;            /* Using variables to reduce repetition */
+}
+
+/* EXPERIMENTING WITH OPERATORS */
+
+#nooitgedacht-text {
+    max-width: ($main-image-width)-150px;     /* Just to align nicely with the 3 images in desktop mode */
+}
+
+/* DEFINING SOME CUSTOM CLASSES */
+
+.nav-links {
+    @include side-padding(40px);            /* To space out the menu items a bit */
+}
+
+.center-image {                             /* Got this from: https://stackoverflow.com/a/35345577/12786165 */
+    padding: 0;
+    display: block;
+    margin: 20px auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.quote-block {                             /* The required block */    
+    color: $main-colour;
+    font-size: 15px;
+    max-width: 700px;
+    background-color: #f2f2f2;
+    padding: 5px;
+}
+
+.quote-block-caption {                      
+    color: $secondary-colour;
+    padding-left: 45px;
+    padding-bottom: 10px;
+}
+
+.submit-button {
+    text-align: center;                  /* Got this from: https://stackoverflow.com/questions/9971740/aligning-a-button-to-the-center */
+}
+
+.information-block {
+    margin-top: 30px;
+    max-width: $main-image-width;       /* so it doesn't take up the whole screen in desktop mode */
+    @include side-margin(auto);
+}
+
+.venue-photos {                         /* to space out the photos a bit */
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.registry-item {
+    margin:10px;
+}
+/*https://www.tutorialspoint.com/How-to-place-two-divs-next-to-each-other-in-HTML*/
+
+.registry-button {
+    margin: 20px;
+    text-align: center;
+}
+
+.registry-image {
+    padding: 20px;
+}
+
+/* STYLING SOME UNIQUE IDs */
+
+#form-block {                                   /*to create a border */
+    border-style: dotted;
+    border-width: 1px;
+    border-color: $secondary-colour;
+    padding: 20px;
+    max-width: 250px;
+    color: $main-colour;
+}
+
+#directions-image, #directions-text {               /*Got this from: https://stackoverflow.com/a/37377793/12786165 */
+    max-width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    padding-right: 50px;
+    color: $main-colour;
+}
+
+#slide-button {
+    margin-left: 50px;
+    margin-bottom: 40px;
+}
+
+/* Creating a drop-down menu accordeon style
+
+https://www.learningjquery.com/2015/10/using-jquery-to-create-a-drop-down-menu */
+#menu a { 
+    text-decoration: none; 
+    color: #333; 
+    padding-right: 5px; } 
+   
+/* Making the lis items appear next to each other instead of underneath each other*/
+#menu ul li { 
+    display: inline; 
+} 
+
+/* this is not visible for now, but when the item slides down with jQuery, it will be*/
+.dropdown-menu { 
+    display: none; 
+}
+
+/*this is not working, need to revisit */
+.like-button {
+  background-color: #4CAF50; /* Green */
+  border: darkslategrey;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

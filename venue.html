@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Tamira and Nono's wedding</title>
+        <link href="scss/styling.css" rel="stylesheet" type="text/css">
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    </head>
+
+    <header style="text-align: center;">
+        <h1 id="page-top">Tamira and Letlhogonono</h1>
+        <nav>
+            <div id="menu"> 
+                <ul> 
+                    <li><a href="index.html" class="nav-links">Home</a></li>
+                    <li><a href="rsvp.html" class="nav-links">RSVP</a></li> 
+                    <li><a href="venue.html" class="nav-links">The venue</a></li>  
+                    <li><a href="save-for-later.html" class="nav-links">Registry</a> 
+                        <ul class="dropdown-menu"> 
+                            <li><a href="saved-for-later.html" class="nav-links">Saved items</a></li> 
+                        </ul> 
+                    </li> 
+                </ul> 
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <section class="information-block">
+            <h2>Nooitgedacht</h2>
+            <p id="nooitgedacht-text">
+                Nooitgedacht is a family-owned historical Cape Dutch wine estate in Stellenbosch with a homestead and outbuildings that date back to 1774. 
+                The wedding will take place in its original cellar, as well as on the lawns shaded by century-old oak trees. For more information about Nooitgedacht,
+                visit their website <a href="https://www.nooitgedachtestate.co.za/" target="_blank">here</a>. <!--External link-->
+            </p>
+            <img src="https://www.nooitgedachtestate.co.za/pieces/cms/6006f3a7d69e4.jpg" alt="Nooitgedacht manor" class="venue-photos">
+            <img src="images/lawn.jpg" alt="Nooitgedacht lawns" class="venue-photos">
+            <img src="images/lawns2.jpg" alt="Nooitgedacht lawns with reception" class="venue-photos"> <!--Giving them a class so I can style them together-->
+        </section>
+
+        <section class="information-block">
+            <h2>Directions</h2>
+            <div id="directions-map">                                                           <!--Added divs here per stackoverflow advice to get the text and image inline together https://stackoverflow.com/a/37377793/12786165-->
+                <div id="directions-text">
+                    <h3>For those who want a scenic route:</h3>
+                    <p>                
+                        Take the N1 out of Cape Town. <br>
+                        Take the exit for Stellenbosch. <br>
+                        Take the road to Franschoek. <br>
+                        The brings you to a t-junction where you reach the R-45. <br>
+                        There, turn left in the direction of Paarl. <br>
+                        It is on that road, on your right hand side. <br>
+                    <h3>For those who might be running late:</h3>
+                    <p>
+                        You can get the fastest route with traffic info <a href="https://goo.gl/maps/iV5aAW4Tyxp4ddgZ8" target="_blank">from Google</a>. <!--External link-->
+                    </p>
+                </div>
+                <img src="images/map.png" alt="map to Nooitgedacht" id="directions-image">
+            </div>
+        </section>
+    <script src="js/wedding.js"></script>  
+    </body>
+
+    <footer>
+        <a href="#page-top">Return to the top</a>
+    </footer>
+    
+</html>
