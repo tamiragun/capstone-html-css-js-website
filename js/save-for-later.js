@@ -7,15 +7,27 @@ registryButton.click(test);
 
 //Defining the function that will dave the description of the selected item into local storage
 function test(){
-    //First, selecting an element to be saved to LoccalStorage. I am just seleciting the description for now, instead of a whole div
-    let chosenObject = $(this).siblings('.registry-item-description');
-    //Testing by adding an alert
-    alert(chosenObject.html());
+    //First, selecting an element to be saved to LoccalStorage. 
+    let chosenObjectText = $(this).siblings('.registry-item-description');
+    let chosenObjectImage = $(this).siblings('.registry-image');
+    //Testing by printing
+    console.log(chosenObjectText.html());
+    console.log(chosenObjectImage.attr('src'));
+    //storing this data into an Item object
+    let chosenObjectItem = new Item(chosenObjectText.html(),chosenObjectImage.attr('src'));
+    //Printing this new Item object to test
+    console.log(chosenObjectItem);   
     //Storing the selected object
-    localStorage.setItem("chosenObject", JSON.stringify(chosenObject));
+    localStorage.setItem("chosenObject", JSON.stringify(chosenObjectItem));
     //Testing by printing it out:
-    console.log(chosenObject);
+    console.log(chosenObjectItem);
 };
+
+//Instantiating an object for saved items:
+function Item(description, imageSource) {
+    this.description = description;
+    this.imageSource = imageSource;
+}
 
 
 //Creating a like-unlike button for each registry item:
