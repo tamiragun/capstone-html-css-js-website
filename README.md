@@ -3,9 +3,9 @@
 This is the capstone project in level 1 of my HyperionDev immersive full-stack bootcamp. It brings together the HTML, CSS and JavaScript skills I have learned into a single, published website.
 
 ## Contents
-* Installation
-* Usage
-* Credits
+* [Installation](https://github.com/tamiragun/capstone-project#installation)
+* [Usage](https://github.com/tamiragun/capstone-project#usage)
+* [Credits](https://github.com/tamiragun/capstone-project#credits)
 
 ## Installation
 
